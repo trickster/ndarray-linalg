@@ -1,26 +1,26 @@
 [package]
-name    = "ndarray-linalg"
+name = "ndarray-linalg"
 version = "0.14.1"
 authors = ["Toshiki Teramura <toshiki.teramura@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
-description   = "Linear algebra package for rust-ndarray using LAPACK"
+description = "Linear algebra package for rust-ndarray using LAPACK"
 documentation = "https://docs.rs/ndarray-linalg/"
-repository    = "https://github.com/rust-ndarray/ndarray-linalg"
-keywords      = ["ndarray", "lapack", "matrix"]
-license       = "MIT OR Apache-2.0"
-readme        = "../README.md"
-categories    = ["algorithms", "science"]
+repository = "https://github.com/rust-ndarray/ndarray-linalg"
+keywords = ["ndarray", "lapack", "matrix"]
+license = "MIT OR Apache-2.0"
+readme = "../README.md"
+categories = ["algorithms", "science"]
 
 [features]
-default   = []
+default = []
 
-netlib    = ["lax/netlib"]
-openblas  = ["lax/openblas"]
+netlib = ["lax/netlib"]
+openblas = ["lax/openblas"]
 intel-mkl = ["lax/intel-mkl"]
 
-netlib-static   = ["lax/netlib-static"]
-netlib-system   = ["lax/netlib-system"]
+netlib-static = ["lax/netlib-static"]
+netlib-system = ["lax/netlib-system"]
 
 openblas-static = ["lax/openblas-static"]
 openblas-system = ["lax/openblas-system"]
@@ -31,7 +31,7 @@ intel-mkl-system = ["lax/intel-mkl-system"]
 [dependencies]
 cauchy = "0.4.0"
 num-complex = "0.4.0"
-num-traits  = "0.2.14"
+num-traits = "0.2.14"
 rand = "0.8.3"
 thiserror = "1.0.24"
 
