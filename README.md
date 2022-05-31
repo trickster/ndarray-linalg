@@ -1,5 +1,9 @@
 ndarray-linalg
 ===============
+
+This is a fork with patched version of `intel-mkl-src`.
+
+
 [![crate](https://img.shields.io/badge/crates.io-ndarray--linalg-blue)](https://crates.io/crates/ndarray-linalg)
 [![docs.rs](https://docs.rs/ndarray-linalg/badge.svg)](https://docs.rs/ndarray-linalg)
 

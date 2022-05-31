@@ -4,19 +4,19 @@ version = "0.2.0"
 authors = ["Toshiki Teramura <toshiki.teramura@gmail.com>"]
 edition = "2018"
 
-description   = "LAPACK wrapper without ndarray"
+description = "LAPACK wrapper without ndarray"
 documentation = "https://docs.rs/lax/"
-repository    = "https://github.com/rust-ndarray/ndarray-linalg"
-keywords      = ["lapack", "matrix"]
-license       = "MIT OR Apache-2.0"
-readme        = "README.md"
-categories    = ["algorithms", "science"]
+repository = "https://github.com/rust-ndarray/ndarray-linalg"
+keywords = ["lapack", "matrix"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+categories = ["algorithms", "science"]
 
 [features]
 default = []
 
-netlib    = ["netlib-static"]
-openblas  = ["openblas-static"]
+netlib = ["netlib-static"]
+openblas = ["openblas-static"]
 intel-mkl = ["intel-mkl-static"]
 
 netlib-static = ["netlib-src/static"]
@@ -25,7 +25,10 @@ netlib-system = ["netlib-src/system"]
 openblas-static = ["openblas-src/static"]
 openblas-system = ["openblas-src/system"]
 
-intel-mkl-static = ["intel-mkl-src/mkl-static-lp64-seq", "intel-mkl-src/download"]
+intel-mkl-static = [
+    "intel-mkl-src/mkl-static-lp64-seq",
+    "intel-mkl-src/download",
+]
 intel-mkl-system = ["intel-mkl-src/mkl-dynamic-lp64-seq"]
 
 [dependencies]
@@ -35,7 +38,9 @@ num-traits = "0.2.14"
 lapack = "0.18.0"
 
 [dependencies.intel-mkl-src]
-version = "0.6.0"
+git = "https://github.com/njaard/mkl-src"
+rev = "4b561ff"
+package = "mkl-src"
 default-features = false
 optional = true
 
